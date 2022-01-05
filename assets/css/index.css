@@ -221,8 +221,8 @@
 }
 
 .gallery__item:hover {
-  -webkit-box-shadow: 0 8px 32px rgba(26, 26, 26, 0.1);
-          box-shadow: 0 8px 32px rgba(26, 26, 26, 0.1);
+  -webkit-box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.18), 0px 20px 32px rgba(96, 97, 112, 0.34);
+          box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.18), 0px 20px 32px rgba(96, 97, 112, 0.34);
 }
 
 .gallery__item:nth-child(4), .gallery__item:nth-child(5), .gallery__item:nth-child(6) {
