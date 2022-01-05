@@ -1,0 +1,141 @@
+/*========== HOME ==========*/
+.home {
+    &__img {
+        &-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    &__img, &__img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: 83%;
+        z-index: -1;
+
+        @media (min-height: 721px) {
+            height: 640px;
+        }
+
+        @media (max-height: 500px) and (min-width: 501px) {
+            height: 150vh;
+        }
+    }
+
+    &__container {
+        position: relative;
+        height: calc(100vh - var(--header-height));
+        align-content: center;
+        row-gap: 3rem;
+        grid-row-gap: 3rem;
+
+        @media (min-width: 768px) {
+            height: 100vh;
+        }
+
+        @media (min-height: 721px) {
+            height: 640px;
+        }
+
+        @media (max-height: 500px) and (min-width: 501px) {
+            height: 150vh;
+        }
+    }
+
+    &__data {
+        @media (min-width) {
+            align-items: flex-end;
+        }
+
+        &-subtitle {
+            display: block;
+            font-weight: var(--font-semi-bold);
+            margin-bottom: var(--mb-1);
+            color: #fff;
+        }
+
+        &-title {
+            color: #fff;
+            font-size: var(--biggest-font-size);
+            font-weight: var(--font-regular);
+            margin-bottom: var(--mb-2);
+        }
+    }
+}
+
+/* SCROLL DOWN */
+.scroll-down {
+	width: 0.5rem;
+	height: 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &:hover {
+        color: #c4c4c4;
+
+        .mousey {
+            border-color: #c4c4c4;
+        }
+
+        .scroller {
+            background-color: #c4c4c4;
+        }
+    }
+}
+
+.mousey {
+	width: 3px;
+	padding: 10px 12px;
+	height: 1.5rem;
+	border: 2px solid #fff;
+	border-radius: 25px;
+	opacity: 0.75;
+	box-sizing: content-box;
+	margin-right: 1rem;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.scroller {
+	width: 3px;
+	height: 0.5rem;
+	border-radius: 25%;
+	background-color: #fff;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+	animation-name: scroll;
+	animation-duration: 2.2s;
+	animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+	animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		opacity: 1;
+  }
+	100% {
+		transform: translateY(15px);
+		-webkit-transform: translateY(15px);
+		-moz-transform: translateY(15px);
+		-ms-transform: translateY(15px);
+		-o-transform: translateY(15px);
+		opacity: 0;
+  }
+}

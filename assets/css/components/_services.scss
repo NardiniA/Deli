@@ -1,0 +1,32 @@
+/*========== SERVICES ==========*/
+.services {
+    &__container{
+        row-gap: 2.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    
+        @media (min-width: 768px) {
+            margin-top: var(--mb-6);
+        }
+    }
+
+    &__content{
+        text-align: center;
+    }
+
+    &__img{
+        width: 64px;
+        height: 64px;
+        fill: var(--first-color);
+        margin-bottom: var(--mb-2);
+    }
+
+    &__title{
+        font-size: var(--h3-font-size);
+        color: var(--title-color);
+        margin-bottom: var(--mb-1);
+    }
+
+    &__description{
+        padding: 0 1.5rem;
+    }
+}

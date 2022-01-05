@@ -1,0 +1,22 @@
+.mapouter {
+    position: relative;
+    text-align: right;
+    max-height: 450px;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    max-height: 450px;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+}

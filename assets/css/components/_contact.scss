@@ -1,0 +1,140 @@
+.contact {
+    &__title {
+        color: var(--title-color);
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb-2);
+        line-height: 1.4;
+
+        @media (min-width: 992px) {
+            font-size: var(--h1-font-size);
+        }
+    }
+
+    &__subtitle {
+        color: var(--title-color);
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+        color: var(--text-color);
+        margin-bottom: var(--mb-1);
+    }
+
+    &__desc {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+
+        &.multi-line {
+            align-items: flex-start;
+            
+            i {
+                line-height: 1.25;
+            }
+        }
+    }
+
+    a.contact__desc {
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--first-color);
+        }
+    }
+
+    &__icon {
+        font-size: 1.25rem;
+    }
+
+    &__data {
+        display: grid;
+        row-gap: 2rem;
+    }
+
+    .section-desc {
+        margin-bottom: var(--mb-5);
+    }
+
+    &__container {
+        gap: 3.5rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.form {
+    margin-bottom: 5rem;
+
+    &__inputs {
+        display: grid;
+        row-gap: 2rem;
+        margin-bottom: var(--mb-5);
+    }
+
+    &__content {
+        position: relative;
+        height: 3rem;
+        border-bottom: 1px solid var(--text-color-light);
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem 1rem 0;
+        background: none;
+        color: var(--text-color);
+        border: none;
+        outline: none;
+        z-index: 1;
+        font-family: inherit;
+        font-size: var(--normal-font-size);
+
+        &-group {
+            display: grid;
+            gap: 2rem;
+            
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    /*Input focus move up label*/
+    &__input:focus + &__label{
+        top: -.75rem;
+        left: 0;
+        font-size: var(--smaller-font-size);
+        z-index: 10;
+    }
+
+    /*Input focus sticky top label*/
+    &__input:not(:placeholder-shown).form__input:not(:focus) + &__label{
+        top: -.75rem;
+        font-size: var(--smaller-font-size);
+        z-index: 10;
+    }
+
+    &__label {
+        position: absolute;
+        top: 0.75rem;
+        width: 100%;
+        font-size: var(--small-font-size);
+        color: var(--text-color-light);
+        transition: .3s;
+    }
+
+    &__area {
+        height: 7rem;
+    }
+
+    textarea {
+        resize: none;
+    }
+}

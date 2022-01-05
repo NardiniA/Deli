@@ -1,0 +1,42 @@
+/*========== CONTENT ==========*/
+.content {
+    &__data{
+        text-align: center;
+    }
+
+    &__description{
+        margin-bottom: var(--mb-3);
+    }
+
+    &__img{
+        width: 280px;
+        border-radius: .5rem;
+        justify-self: center;
+    }
+
+    @media (min-width: 576px) {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        &__data, .section-title, .section-subtitle {
+            text-align: initial;
+        }
+
+        &__img {
+            width: 380px;
+            order: -1;
+        }
+    }
+
+    @media (min-width: 960px) {
+        &__container {
+            column-gap: 7rem;
+        }
+    }
+}
+
+.order-1 {
+    order: 1;
+}
